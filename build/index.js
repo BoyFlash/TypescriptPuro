@@ -25,6 +25,22 @@ const bot1 = {
 const bot2 = {
     id: 1,
     name: "megaman",
+    sayHello: function () {
+        throw new Error("Function not implemented.");
+    }
 };
-console.log(bot1);
-console.log(bot2);
+// console.log(bot1);
+// console.log(bot2);
+class Pessoa {
+    id;
+    name;
+    constructor(id, name) {
+        this.id = id;
+        this.name = name;
+    }
+    sayHello() {
+        return `${this.name}`;
+    }
+}
+const p = new Pessoa(1, "gustavo");
+console.log(p.sayHello());

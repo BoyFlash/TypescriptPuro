@@ -60,33 +60,42 @@ function addToHello(name: string): string {
    return `Hello ${name}`;
 }
 console.log(addToHello("Eu"));
-
+ 
 // Retornar dois tipos diferentes
 function callToPhone(phone: number | string): number | string {
    return phone;
 }
 console.log(callToPhone(19998765432));
+ ```
 
-// Na funções assíncrona você tipa o return promise entre <>
+- Na funções assíncrona você tipa o return promise entre <>
+
+```
 async function getDatabase(id:number): Promise<number | string> {
    return "Heber";
 }
+```
 
-//Interface (type X interface)
+- Interface (type X interface)
  - os dois aceitam multi tipos
  - podem ter uma propriedade que é somente leitura (readonly). Isso significa que só pode ser atribuida durante a criação e não poderá ser alterado posteriormente
 
-// Type é mais utilizado para tipar objetos 
+- Type é mais utilizado para tipar objetos 
+
+```
 type robot = {
    id: number;
    name: string;
 }
+```
+- Interface é mais utilizado para tipar classes
 
-//Interface é mais utilizado para tipar classes
+```
 interface robot2 { // não tem o igual
    readonly id: number;
    name: string;
 }
+ 
 const bot1: robot = {
    id: 1,
    name: "megaman",
@@ -98,5 +107,22 @@ const bot2: robot2 = {
 console.log(bot1);
 console.log(bot2);
 
+
+class Pessoa implements robot2{
+   id: number | string;
+   name: string;
+
+   constructor(id: number | string, name:string){
+      this.id = id;
+      this.name = name;
+   }
+   sayHello(): string {
+      return `${this.name}`;
+   }
+
+}
+
+const p = new Pessoa(1, "I'm Isaque")
+console.log(p.sayHello());
 
 ```
