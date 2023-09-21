@@ -126,3 +126,13 @@ const p = new Pessoa(1, "I'm Isaque")
 console.log(p.sayHello());
 
 ```
+
+#### Para instalar servidor 
+```
+npm install ts-node-dev -D
+```
+E no arquivo package.json colocamos um novo script:
+```
+"start:dev": "ts-node-dev --respawn --transpile-only src/index.ts",
+```
+
