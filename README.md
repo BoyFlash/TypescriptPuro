@@ -80,7 +80,7 @@ async function getDatabase(id:number): Promise<number | string> {
  - os dois aceitam multi tipos
  - podem ter uma propriedade que é somente leitura (readonly). Isso significa que só pode ser atribuida durante a criação e não poderá ser alterado posteriormente
 
-- Type é mais utilizado para tipar objetos 
+- Type é mais utilizado para tipar objetos: 
 
 ```
 type robot = {
